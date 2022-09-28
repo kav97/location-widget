@@ -1,5 +1,21 @@
-.App {
-  text-align: center;
+@use "./assets/sass/variables.scss" as *;
+@use "./assets/sass/reset" as *;
+
+html {
+  background-color: $color-beige;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-black;
+
+  .loading-data{
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
 }
 
 

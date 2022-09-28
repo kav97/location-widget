@@ -56,7 +56,7 @@ const App = () => {
           />
         </>
       ) : (
-        <p>Loading...</p>
+        <p className="loading-data">Loading...</p>
       )}
     </div>
   );

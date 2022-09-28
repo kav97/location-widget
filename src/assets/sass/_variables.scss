@@ -1,0 +1,26 @@
+// breakpoints
+$mobile-breakpoint: 320px;
+$moblie-large-breakpoint: 425px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1024px;
+$desktop-large-breakpoint: 1440px;
+$desktop-4k-breakpoint: 2560px;
+
+//colors
+$color-black: #2d3436;
+$color-beige: #E8d3b9;
+$color-white: 	#FAF9F6;
+
+@media screen and (min-width: $tablet-breakpoint) {
+    // increases font-size of all items by 10%
+    :root {
+        font-size: 110%;
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    // increases font-size of all items by 20%
+    :root {
+        font-size: 120%;
+    }
+}
