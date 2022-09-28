@@ -1,6 +1,15 @@
 @use "../../assets/sass/variables.scss" as *;
 
 .header {
+    padding: 1rem;
     width: 100%;
     background-color: $color-beige; 
+
+    .greeting {
+        text-align: center;
+        
+        &__message {
+            margin: 1rem 0 1rem 0;
+        }
+    }
 }

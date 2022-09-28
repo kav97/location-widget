@@ -13,20 +13,20 @@ const Header = ({ location }) => {
   if (currentHour > 18) {
     greetingTime = "Evening";
     greetingImg = moon;
-  } else if (currentHour > 12) {
+  } else if (currentHour >= 12) {
     greetingTime = "Afternoon";
     greetingImg = sun;
   }
 
   return (
     <header className="header">
-      <div className="header-greeting">
-        <img src={greetingImg} className="header-greeting__img" alt={greetingTime} />
-        <h1 className="header-greeting__message">Good {greetingTime}!</h1>
+      <div className="greeting">
+        <img src={greetingImg} className="greeting__img" alt={greetingTime} />
+        <h1 className="greeting__message">Good {greetingTime}!</h1>
       </div>  
-      <div className="header-info">
-        <p className="header-info__date">{date.toLocaleDateString('en-GB')}</p>
-        <p className="header-info__location">
+      <div className="info">
+        <p className="info__date">{date.toLocaleDateString('en-GB')}</p>
+        <p className="info__location">
           {location.name}, {location.region}, {location.country}
         </p>
       </div>

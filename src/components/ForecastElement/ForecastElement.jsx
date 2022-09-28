@@ -8,8 +8,6 @@ const ForecastElement = ({ data }) => {
   } else {
     displayDate = `${data.date.substring(8)}/${data.date.substring(5, 7)}`;
   }
-  console.log(date.toISOString());
-  console.log(data.date);
 
   return (
     <div className="forecast-element">
@@ -25,6 +23,7 @@ const ForecastElement = ({ data }) => {
           <p className="forecast-info__temp forecast-info__temp--low">{data.day.mintemp_c}°C</p>
         </div>
       </div>
+      <p className="forecast-condition">{data.day.condition.text}</p>
     </div>
   );
 };
