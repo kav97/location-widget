@@ -3,7 +3,7 @@ import ForecastElement from "../../components/ForecastElement/ForecastElement.js
 
 const WeeklyForecast = ({ forecastData }) => {
   return (
-    <div className="weekly-forecast">
+    <div className="forecast-container">
       {forecastData.forecastday.map((day, i) => (
         <ForecastElement key={i} data={day} />
       ))}

@@ -19,16 +19,18 @@ const Header = ({ location }) => {
   }
 
   return (
-    <div className="header">
-      <div className="header__info">
-        <img src={greetingImg} className="header__img" alt={greetingTime} />
-        <p className="header__greeting">Good {greetingTime}!</p>
-        <p className="header__date">{date.toLocaleDateString('en-GB')}</p>
-        <p className="header__location">
+    <header className="header">
+      <div className="header-greeting">
+        <img src={greetingImg} className="header-greeting__img" alt={greetingTime} />
+        <h1 className="header-greeting__message">Good {greetingTime}!</h1>
+      </div>  
+      <div className="header-info">
+        <p className="header-info__date">{date.toLocaleDateString('en-GB')}</p>
+        <p className="header-info__location">
           {location.name}, {location.region}, {location.country}
         </p>
       </div>
-    </div>
+    </header>
   );
 };
 

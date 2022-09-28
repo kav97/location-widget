@@ -13,14 +13,18 @@ const ForecastElement = ({ data }) => {
 
   return (
     <div className="forecast-element">
-      <p className="forecast-element__info">{displayDate}</p>
-      <p className="forecast-element__info">High: {data.day.maxtemp_c}°C</p>
-      <p className="forecast-element__info">Low: {data.day.mintemp_c}°C</p>
-      <img
-        src={data.day.condition.icon}
-        alt="the day's weather condition"
-        className="forecast-element__info"
-      />
+      <p className="forecast-date">{displayDate}</p>
+      <div className="forecast-info">
+        <img
+          src={data.day.condition.icon}
+          alt="the day's weather condition"
+          className="forecast-info__img"
+        />
+        <div className="forecast-info__temp">
+          <p className="forecast-info__temp forecast-info__temp--high">{data.day.maxtemp_c}°C</p>
+          <p className="forecast-info__temp forecast-info__temp--low">{data.day.mintemp_c}°C</p>
+        </div>
+      </div>
     </div>
   );
 };

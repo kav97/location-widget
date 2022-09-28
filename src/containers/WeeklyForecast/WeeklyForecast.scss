@@ -1,0 +1,7 @@
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    gap: 25px;
+    margin: 50px;
+    justify-content: center;
+}
